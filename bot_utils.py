@@ -49,7 +49,7 @@ def convert_currency(update, context) -> None:
     print(result, amount, from_currency, to_currency, end='\n')
     # # Отвечаем пользователю результатом конвертации
     update.message.reply_text(
-        f'{amount} {from_currency} = {result}{to_currency}'
+        f'{amount} {from_currency} = {result} {to_currency}'
         )
 
 
