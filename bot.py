@@ -1,14 +1,20 @@
-from telegram.ext import(
+from telegram.ext import (
     Updater, MessageHandler, CommandHandler, Filters
 )
 
 import logging
 from settings import TOKEN
+from bot_utils import (
+    hello_user, help_command, convert_currency,
+    echo
+    )
 
+# Логгируем, создаем файл
 logging.basicConfig(filename='error_bot.log', level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
-def activate_bot():
+def main() -> None:
     # Создаем бота
     bot = Updater(TOKEN, use_context=True)
     dp = bot.dispatcher
@@ -25,4 +31,4 @@ def activate_bot():
 
 
 if __name__ == '__main__':
-    activate_bot()
+    main()
