@@ -3,7 +3,7 @@ from telegram.ext import (
 )
 
 import logging
-from settings import TOKEN
+from settings_local import TOKEN
 from bot_utils import (
     hello_user, help_command, convert_currency,
     echo

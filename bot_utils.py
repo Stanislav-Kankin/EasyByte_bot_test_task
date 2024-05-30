@@ -1,6 +1,6 @@
 import requests
 import json
-from settings import API_CURRENCY
+from settings_local import API_CURRENCY
 
 
 # Получаем коэффициент для расчета валюты
